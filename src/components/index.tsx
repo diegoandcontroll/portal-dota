@@ -24,7 +24,7 @@ import { HiCode, HiCollection } from 'react-icons/hi';
 import { MdHome } from 'react-icons/md';
 import React from 'react';
 
-export const index = () => {
+export const Sidebar = () => {
   const sidebar = useDisclosure();
 
   const NavItem = (props: any) => {
