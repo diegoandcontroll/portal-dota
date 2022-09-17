@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/no-unescaped-entities */
@@ -85,7 +86,7 @@ const Home: NextPage = () => {
                 <chakra.span fontSize="3xl">1°</chakra.span>
                 <Wrap cursor="pointer">
                   <WrapItem>
-                    <img src="/hero.jpg" alt="imagehero" />
+                    <img src="/item.jpg" alt="imagehero" />
                   </WrapItem>
                 </Wrap>
               </Flex>
@@ -96,7 +97,7 @@ const Home: NextPage = () => {
                 <chakra.span fontSize="3xl">2°</chakra.span>
                 <Wrap cursor="pointer">
                   <WrapItem>
-                    <img src="/hero.jpg" alt="imagehero" />
+                    <img src="/item.jpg" alt="imagehero" />
                   </WrapItem>
                 </Wrap>
               </Flex>
@@ -107,7 +108,7 @@ const Home: NextPage = () => {
                 <chakra.span fontSize="3xl">3°</chakra.span>
                 <Wrap cursor="pointer">
                   <WrapItem>
-                    <img src="/hero.jpg" alt="imagehero" />
+                    <img src="/item.jpg" alt="imagehero" />
                   </WrapItem>
                 </Wrap>
               </Flex>
