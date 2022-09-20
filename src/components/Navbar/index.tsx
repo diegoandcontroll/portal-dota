@@ -32,6 +32,7 @@ interface LinkItemProps {
 }
 const LinkItems: Array<LinkItemProps> = [
   { name: 'Home', icon: FiHome, href: '/' },
+  { name: 'Tavern', icon: FiHome, href: '/tavern' },
   { name: 'Heroes', icon: FiTrendingUp, href: '/heroes' },
   { name: 'FAQ', icon: FiCompass, href: '/faq' },
   { name: 'History', icon: FiStar, href: '/history' },

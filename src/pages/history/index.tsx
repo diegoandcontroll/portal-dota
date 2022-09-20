@@ -6,12 +6,12 @@ const index = () => {
   return (
     <Box as="main" p="4" color="white" ml="12">
       <Head>
-        <title>Heroes</title>
+        <title>History</title>
       </Head>
       <Flex justify="center" align="center">
         <Box>
           <Heading fontWeight="thin" textAlign="center" fontSize="1xl">
-            Hero Page
+            History Page
           </Heading>
         </Box>
       </Flex>
