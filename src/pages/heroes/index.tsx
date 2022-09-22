@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, Heading } from '@chakra-ui/react';
 import Head from 'next/head';
+import Card from '../../components/Card';
 import { api } from '../../services/api';
 
 export async function getServerSideProps() {
-  const response = await api.get('/heroes');
+  const response = await api.get('/heroes?limit=6&page=1');
   const data = await response.data;
 
   return {
@@ -15,6 +16,7 @@ export async function getServerSideProps() {
     },
   };
 }
+
 const index = ({ heroes, meta }: any) => {
   console.log(heroes);
   console.log(meta);
@@ -36,6 +38,21 @@ const index = ({ heroes, meta }: any) => {
           />
         </Box>
       </Flex>
+      <Grid templateColumns="repeat(3, 1fr)" gap={12}>
+        {heroes?.map((hero: any) => (
+          <GridItem w="100%" key={hero?.id}>
+            <Card
+              health={hero?.health_points}
+              hero_image={hero?.logo_hero}
+              name={hero?.name}
+              lastname={hero?.lastname}
+              mana={hero?.mana}
+              tavern={hero?.tavern.name}
+              slug={hero?.slug}
+            />
+          </GridItem>
+        ))}
+      </Grid>
     </Box>
   );
 };
