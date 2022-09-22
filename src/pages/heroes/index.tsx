@@ -6,7 +6,7 @@ import Card from '../../components/Card';
 import { api } from '../../services/api';
 
 export async function getServerSideProps() {
-  const response = await api.get('/heroes?limit=6&page=1');
+  const response = await api.get('heroes?limit=6&page=1');
   const data = await response.data;
 
   return {

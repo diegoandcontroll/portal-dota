@@ -32,9 +32,8 @@ const index = ({ tavern }: any) => {
   const [heroInfo, setHeroInfo] = useState([]);
 
   const fechtHeroTavern = async (id: string) => {
-    const response = await api.get(`/tavern/${id}`);
+    const response = await api.get(`http://localhost:5000/tavern/${id}`);
     const data = await response.data;
-    console.log(data[0].heroes);
     setHeroInfo(data[0].heroes);
     setShow(!show);
   };
