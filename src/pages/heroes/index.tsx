@@ -6,20 +6,17 @@ import Card from '../../components/Card';
 import { api } from '../../services/api';
 
 export async function getServerSideProps() {
-  const response = await api.get('/heroes?limit=6&page=1');
+  const response = await api.get('heroes?limit=6&page=4');
   const data = await response.data;
 
   return {
     props: {
       heroes: data.items,
-      meta: data.meta,
     },
   };
 }
 
-const index = ({ heroes, meta }: any) => {
-  console.log(heroes);
-  console.log(meta);
+const index = ({ heroes }: any) => {
   return (
     <Box as="main" p="4" color="white" ml="12">
       <Head>

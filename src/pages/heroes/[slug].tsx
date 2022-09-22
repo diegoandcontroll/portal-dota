@@ -38,7 +38,7 @@ interface Skill {
 }
 
 export async function getServerSideProps({ params }: any) {
-  const response = await api.get(`/heroes/hero/${params.slug}`);
+  const response = await api.get(`heroes/hero/${params.slug}`);
   const data = await response.data;
 
   return {

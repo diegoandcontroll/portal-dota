@@ -32,9 +32,8 @@ const index = ({ tavern }: any) => {
   const [heroInfo, setHeroInfo] = useState([]);
 
   const fechtHeroTavern = async (id: string) => {
-    const response = await api.get(`/tavern/${id}`);
+    const response = await api.get(`http://localhost:5000/tavern/${id}`);
     const data = await response.data;
-    console.log(data[0].heroes);
     setHeroInfo(data[0].heroes);
     setShow(!show);
   };
@@ -60,7 +59,9 @@ const index = ({ tavern }: any) => {
       </Flex>
       <Flex mt="8" justify="space-around" align="center">
         <Box>
-          <Heading fontSize="1xl">Sentinel</Heading>
+          <Heading fontSize="1xl" textAlign="center">
+            Sentinel
+          </Heading>
           <VStack>
             {tavern &&
               tavern.map(
@@ -110,7 +111,9 @@ const index = ({ tavern }: any) => {
           </VStack>
         </Box>
         <Box>
-          <Heading fontSize="1xl">Scourge</Heading>
+          <Heading fontSize="1xl" textAlign="center">
+            Scourge
+          </Heading>
           <VStack>
             {tavern &&
               tavern.map(

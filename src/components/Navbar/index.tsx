@@ -16,11 +16,12 @@ import {
 } from '@chakra-ui/react';
 import {
   FiHome,
-  FiTrendingUp,
+  FiBookmark,
   FiCompass,
-  FiStar,
   FiSettings,
+  FiHexagon,
   FiMenu,
+  FiGitlab,
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
@@ -32,10 +33,10 @@ interface LinkItemProps {
 }
 const LinkItems: Array<LinkItemProps> = [
   { name: 'Home', icon: FiHome, href: '/' },
-  { name: 'Tavern', icon: FiHome, href: '/tavern' },
-  { name: 'Heroes', icon: FiTrendingUp, href: '/heroes' },
+  { name: 'Tavern', icon: FiHexagon, href: '/tavern' },
+  { name: 'Heroes', icon: FiGitlab, href: '/heroes' },
   { name: 'FAQ', icon: FiCompass, href: '/faq' },
-  { name: 'History', icon: FiStar, href: '/history' },
+  { name: 'History', icon: FiBookmark, href: '/history' },
   { name: 'Items', icon: FiSettings, href: '/items' },
 ];
 
