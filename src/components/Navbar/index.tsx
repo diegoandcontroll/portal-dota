@@ -91,7 +91,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <Link key={link.name} href={link.href} passHref>
+        <Link key={link.name} href={link.href}>
           <NavItem icon={link.icon}>{link.name}</NavItem>
         </Link>
       ))}
