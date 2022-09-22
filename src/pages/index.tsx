@@ -12,12 +12,16 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import Head from 'next/head';
 
 import CaptionCarousel from '../components/Slider';
 
 const Home: NextPage = () => {
   return (
     <Box as="main" color="white" pl="12">
+      <Head>
+        <title>Portal Dota</title>
+      </Head>
       <Heading
         color="cyan.300"
         fontWeight="light"

@@ -14,22 +14,22 @@ import {
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { api } from '../../services/api';
+export async function getServerSideProps() {
+  const response = await api.get('/tavern');
+  const data = await response.data;
 
-const index = () => {
-  const [tavern, setTavern] = useState([]);
+  return {
+    props: {
+      tavern: data,
+    },
+  };
+}
 
+const index = ({ tavern }: any) => {
   const [show, setShow] = useState(false);
   const [heroInfo, setHeroInfo] = useState([]);
-  useEffect(() => {
-    const fechtData = async () => {
-      const response = await api.get('/tavern');
-      const data = await response.data;
-      setTavern(data);
-    };
-    fechtData().catch((error) => console.log(error));
-  }, []);
 
   const fechtHeroTavern = async (id: string) => {
     const response = await api.get(`/tavern/${id}`);

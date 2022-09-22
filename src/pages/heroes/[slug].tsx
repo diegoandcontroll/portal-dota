@@ -18,8 +18,7 @@ import {
   Td,
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+
 import { api } from '../../services/api';
 interface Skill {
   id: string;
@@ -37,56 +36,19 @@ interface Skill {
   createdAt: Date;
   updatedAt: Date;
 }
-interface Tavern {
-  id: string;
-  name: string;
-  tavern_url: string;
-  type: string;
-  createdAt: Date;
-  updatedAt: Date;
-  deletedAt?: any;
+
+export async function getServerSideProps({ params }: any) {
+  const response = await api.get(`/heroes/hero/${params.slug}`);
+  const data = await response.data;
+
+  return {
+    props: {
+      hero: data,
+    },
+  };
 }
-interface RootObjectTavern {
-  id: string;
-  name: string;
-  lastname: string;
-  slug: string;
-  description: string;
-  logo_hero: string;
-  animate_hero: string;
-  main_attribute: string;
-  agility: string;
-  force: string;
-  intelligence: string;
-  health_points: number;
-  mana_points: number;
-  createdAt: Date;
-  updatedAt: Date;
-  skills: Skill[];
-  tavern: Tavern;
-}
-const index = () => {
-  const router = useRouter();
-  const slug = router.query.slug;
-  const [hero, setHero] = useState<RootObjectTavern>();
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    try {
-      const fecthHero = async () => {
-        setIsLoading(true);
-        const response = await api.get(`/heroes/hero/${slug}`);
-        const data = await response.data;
-        setHero(data);
-      };
-      fecthHero();
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [slug]);
-  hero?.skills?.map((skill) => console.log(skill));
+const index = ({ hero }: any) => {
+  const isLoading = false;
   return (
     <>
       <Flex as="main" p="4" color="white" ml="12" overflowX="hidden">
