@@ -59,7 +59,9 @@ const index = ({ tavern }: any) => {
       </Flex>
       <Flex mt="8" justify="space-around" align="center">
         <Box>
-          <Heading fontSize="1xl">Sentinel</Heading>
+          <Heading fontSize="1xl" textAlign="center">
+            Sentinel
+          </Heading>
           <VStack>
             {tavern &&
               tavern.map(
@@ -109,7 +111,9 @@ const index = ({ tavern }: any) => {
           </VStack>
         </Box>
         <Box>
-          <Heading fontSize="1xl">Scourge</Heading>
+          <Heading fontSize="1xl" textAlign="center">
+            Scourge
+          </Heading>
           <VStack>
             {tavern &&
               tavern.map(
