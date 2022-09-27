@@ -25,10 +25,10 @@ const Home: NextPage = () => {
       <Heading
         color="cyan.300"
         fontWeight="light"
-        fontSize={['3xl', '6xl']}
+        fontSize={['3xl', '4xl']}
         textAlign="center"
       >
-        Welcome to Portal Dota
+        Bem-vindo ao Portal dotA
       </Heading>
       <Flex mt="4">
         <CaptionCarousel />
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
           Curiosidades:
         </Heading>
 
-        <chakra.span color="gray.200" fontSize="1xl" px="8">
+        <chakra.span color="gray.200" fontSize="14" px="8">
           Você sabia que a magia Chain Frost da Lich da ministun no primeiro
           alvo. Pode ser usado para cancelar magias de concentração como
           Epicenter, Fiend's Grip e ETC.
