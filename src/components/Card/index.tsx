@@ -60,7 +60,11 @@ export default function Card({
             </Heading>
             <Text color={'white'}>{lastname}</Text>
             <Text color={'white'}>
-              <chakra.span color="gray.100">Taverna:</chakra.span> {tavern}
+              Taverna:
+              <chakra.span color="gray.100" fontSize="12">
+                {' '}
+                {tavern}
+              </chakra.span>
             </Text>
           </Stack>
 

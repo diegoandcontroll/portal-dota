@@ -7,8 +7,11 @@
   ],
   "rules": {
     // I suggest you add those two rules:
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "error",
-    "prefer-const": "off"
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "prefer-const": "off",
+    "eslint-disable jsx-a11y/alt-text": "off",
+    "eslint-disable react-hooks/rules-of-hooks": "off",
+    "eslint-disable @next/next/no-img-element": "off"
   }
 }

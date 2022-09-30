@@ -6,7 +6,7 @@ import Card from '../../components/Card';
 import { api } from '../../services/api';
 
 export async function getServerSideProps() {
-  const response = await api.get('heroes?limit=6&page=4');
+  const response = await api.get('/heroes?limit=6&page=4');
   const data = await response.data;
 
   return {
@@ -44,7 +44,9 @@ const index = ({ heroes }: any) => {
               name={hero?.name}
               lastname={hero?.lastname}
               mana={hero?.mana}
-              tavern={hero?.tavern.name}
+              tavern={hero?.tavern.name.split(
+                'Intelligence ' || 'Strength ' || 'Agility '
+              )}
               slug={hero?.slug}
             />
           </GridItem>

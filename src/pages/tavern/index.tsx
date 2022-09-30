@@ -15,11 +15,12 @@ import {
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
+import { Tavern } from '../../interfaces/tavern.interface';
 import { api } from '../../services/api';
+
 export async function getServerSideProps() {
   const response = await api.get('/tavern');
   const data = await response.data;
-
   return {
     props: {
       tavern: data,
@@ -32,7 +33,9 @@ const index = ({ tavern }: any) => {
   const [heroInfo, setHeroInfo] = useState([]);
 
   const fechtHeroTavern = async (id: string) => {
-    const response = await api.get(`http://localhost:5000/tavern/${id}`);
+    const response = await api.get(
+      `https://api-portaldota.herokuapp.com/tavern/${id}`
+    );
     const data = await response.data;
     setHeroInfo(data[0].heroes);
     setShow(!show);
