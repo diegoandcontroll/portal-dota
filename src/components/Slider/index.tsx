@@ -107,6 +107,8 @@ export default function CaptionCarousel() {
             key={index}
             height={'1xl'}
             position="relative"
+            borderBottomRadius="8"
+            borderRadius="8"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"

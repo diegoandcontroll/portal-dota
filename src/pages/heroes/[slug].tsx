@@ -73,7 +73,7 @@ const index = ({ hero }: any) => {
             </Heading>
           </GridItem>
 
-          <GridItem w="100%" ml={48}>
+          <GridItem w="100%" ml={48} mt="8">
             {isLoading ? (
               <Spinner bg="gray.100" />
             ) : (
@@ -127,34 +127,40 @@ const index = ({ hero }: any) => {
                 <Th>Inteligência</Th>
                 <Th isNumeric>Pontos de vida</Th>
                 <Th isNumeric>Pontos de Mana</Th>
-                <Th>Taverna</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
                 <Td>
                   {' '}
-                  <chakra.span fontSize="12">
-                    {hero?.main_attribute}
+                  <chakra.span fontSize="12" textAlign="center">
+                    <chakra.img src={hero?.main_attribute} />
                   </chakra.span>
                 </Td>
                 <Td>
-                  <chakra.span fontSize="12">{hero?.agility}</chakra.span>
+                  <chakra.span fontSize="12" textAlign="center">
+                    {hero?.agility}
+                  </chakra.span>
                 </Td>
                 <Td>
-                  <chakra.span fontSize="12">{hero?.force}</chakra.span>
+                  <chakra.span fontSize="12" textAlign="center">
+                    {hero?.force}
+                  </chakra.span>
                 </Td>
                 <Td>
-                  <chakra.span fontSize="12">{hero?.intelligence}</chakra.span>
+                  <chakra.span fontSize="12" textAlign="center">
+                    {hero?.intelligence}
+                  </chakra.span>
                 </Td>
                 <Td isNumeric>
-                  <chakra.span fontSize="12">{hero?.health_points}</chakra.span>
+                  <chakra.span fontSize="12" textAlign="center">
+                    {hero?.health_points}
+                  </chakra.span>
                 </Td>
                 <Td isNumeric>
-                  <chakra.span fontSize="12">{hero?.mana_points}</chakra.span>
-                </Td>
-                <Td>
-                  <chakra.span fontSize="12">{hero?.tavern?.name}</chakra.span>
+                  <chakra.span fontSize="12" textAlign="center">
+                    {hero?.mana_points}
+                  </chakra.span>
                 </Td>
               </Tr>
             </Tbody>
