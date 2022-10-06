@@ -10,10 +10,10 @@ import {
   Wrap,
   WrapItem,
   VStack,
-  Image,
 } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import CaptionCarousel from '../components/Slider';
@@ -59,7 +59,8 @@ const Home: NextPage = () => {
                   <Link href={`heroes/Bounty-Hunter`}>
                     <WrapItem>
                       <Image
-                        height={['12', '58']}
+                        width={48}
+                        height={48}
                         src="http://www.portaldota.com.br/imagens/heros/49_hero_pna.jpg"
                         alt="imagehero"
                       />
@@ -76,7 +77,8 @@ const Home: NextPage = () => {
                   <Link href={`heroes/Crystal-Maiden`}>
                     <WrapItem>
                       <Image
-                        height={['12', '58']}
+                        width={48}
+                        height={48}
                         src="http://www.portaldota.com.br/imagens/heros/11_hero_pna.jpg"
                         alt="imagehero"
                       />
@@ -93,7 +95,8 @@ const Home: NextPage = () => {
                   <Link href={`heroes/Mogul-Kahn`}>
                     <WrapItem>
                       <Image
-                        height={['12', '58']}
+                        width={48}
+                        height={48}
                         src="http://www.portaldota.com.br/imagens/heros/87_hero_pna.jpg"
                         alt="imagehero"
                       />
@@ -115,7 +118,8 @@ const Home: NextPage = () => {
                 <Wrap cursor="pointer">
                   <WrapItem>
                     <Image
-                      height={['12', '58']}
+                      width={48}
+                      height={48}
                       src="	http://www.portaldota.com.br/imagens/item/104_item_pna.jpg"
                       alt="imagehero"
                     />
@@ -130,7 +134,8 @@ const Home: NextPage = () => {
                 <Wrap cursor="pointer">
                   <WrapItem>
                     <Image
-                      height={['12', '58']}
+                      width={48}
+                      height={48}
                       src="/item.jpg"
                       alt="imagehero"
                     />
@@ -145,7 +150,8 @@ const Home: NextPage = () => {
                 <Wrap cursor="pointer">
                   <WrapItem>
                     <Image
-                      height={['12', '58']}
+                      width={48}
+                      height={48}
                       src="http://www.portaldota.com.br/imagens/item/113_item_pna.jpg"
                       alt="imagehero"
                     />
