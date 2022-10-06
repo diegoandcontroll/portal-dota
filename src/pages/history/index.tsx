@@ -37,7 +37,7 @@ const index = () => {
           <Image
             src="https://images8.alphacoders.com/473/473438.jpg"
             w="full"
-            h="380"
+            h={['180', '380']}
             borderRadius="8"
           />
         </Box>

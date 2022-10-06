@@ -10,9 +10,11 @@ import {
   Wrap,
   WrapItem,
   VStack,
+  Image,
 } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import CaptionCarousel from '../components/Slider';
 
@@ -20,7 +22,7 @@ const Home: NextPage = () => {
   return (
     <Box as="main" color="white" pl="12">
       <Head>
-        <title>Portal Dota</title>
+        <title>Portal DotA</title>
       </Head>
       <Heading
         color="cyan.300"
@@ -33,7 +35,7 @@ const Home: NextPage = () => {
       <Flex mt="4">
         <CaptionCarousel />
       </Flex>
-      <Flex mt="8" align="center">
+      <Flex mt="8" align="center" direction={['column', 'row']}>
         <Heading color="gray.200" fontSize="2xl">
           Curiosidades:
         </Heading>
@@ -46,51 +48,77 @@ const Home: NextPage = () => {
       </Flex>
       <Flex mt="8" justify="space-around" align="center">
         <Box>
-          <Heading fontSize="1xl">Herois</Heading>
+          <Heading fontSize="1xl" ml={['8', '']}>
+            Herois
+          </Heading>
           <VStack>
             <Box py="4">
               <Flex gap="6" justify="center" align="center">
-                <chakra.span fontSize="3xl">1°</chakra.span>
+                <chakra.span fontSize={['1xl', '3xl']}>1°</chakra.span>
                 <Wrap cursor="pointer">
-                  <WrapItem>
-                    <img src="/hero.jpg" alt="imagehero" />
-                  </WrapItem>
+                  <Link href={`heroes/Bounty-Hunter`}>
+                    <WrapItem>
+                      <Image
+                        height={['12', '58']}
+                        src="http://www.portaldota.com.br/imagens/heros/49_hero_pna.jpg"
+                        alt="imagehero"
+                      />
+                    </WrapItem>
+                  </Link>
                 </Wrap>
               </Flex>
             </Box>
 
             <Box py="4">
               <Flex gap="6" justify="center" align="center">
-                <chakra.span fontSize="3xl">2°</chakra.span>
+                <chakra.span fontSize={['1xl', '3xl']}>2°</chakra.span>
                 <Wrap cursor="pointer">
-                  <WrapItem>
-                    <img src="/hero.jpg" alt="imagehero" />
-                  </WrapItem>
+                  <Link href={`heroes/Crystal-Maiden`}>
+                    <WrapItem>
+                      <Image
+                        height={['12', '58']}
+                        src="http://www.portaldota.com.br/imagens/heros/11_hero_pna.jpg"
+                        alt="imagehero"
+                      />
+                    </WrapItem>
+                  </Link>
                 </Wrap>
               </Flex>
             </Box>
 
             <Box py="4">
               <Flex gap="6" justify="center" align="center">
-                <chakra.span fontSize="3xl">3°</chakra.span>
+                <chakra.span fontSize={['1xl', '3xl']}>3°</chakra.span>
                 <Wrap cursor="pointer">
-                  <WrapItem>
-                    <img src="/hero.jpg" alt="imagehero" />
-                  </WrapItem>
+                  <Link href={`heroes/Mogul-Kahn`}>
+                    <WrapItem>
+                      <Image
+                        height={['12', '58']}
+                        src="http://www.portaldota.com.br/imagens/heros/87_hero_pna.jpg"
+                        alt="imagehero"
+                      />
+                    </WrapItem>
+                  </Link>
                 </Wrap>
               </Flex>
             </Box>
           </VStack>
         </Box>
         <Box>
-          <Heading fontSize="1xl">Items</Heading>
+          <Heading fontSize="1xl" ml={['8', '']}>
+            Items
+          </Heading>
           <VStack>
             <Box py="4">
               <Flex gap="6" justify="center" align="center">
-                <chakra.span fontSize="3xl">1°</chakra.span>
+                <chakra.span fontSize={['1xl', '3xl']}>1°</chakra.span>
                 <Wrap cursor="pointer">
                   <WrapItem>
-                    <img src="/item.jpg" alt="imagehero" />
+                    <Image
+                      height={['12', '58']}
+                      src="	http://www.portaldota.com.br/imagens/item/104_item_pna.jpg"
+                      alt="imagehero"
+                    />
                   </WrapItem>
                 </Wrap>
               </Flex>
@@ -98,10 +126,14 @@ const Home: NextPage = () => {
 
             <Box py="4">
               <Flex gap="6" justify="center" align="center">
-                <chakra.span fontSize="3xl">2°</chakra.span>
+                <chakra.span fontSize={['1xl', '3xl']}>2°</chakra.span>
                 <Wrap cursor="pointer">
                   <WrapItem>
-                    <img src="/item.jpg" alt="imagehero" />
+                    <Image
+                      height={['12', '58']}
+                      src="/item.jpg"
+                      alt="imagehero"
+                    />
                   </WrapItem>
                 </Wrap>
               </Flex>
@@ -109,10 +141,14 @@ const Home: NextPage = () => {
 
             <Box py="4">
               <Flex gap="6" justify="center" align="center">
-                <chakra.span fontSize="3xl">3°</chakra.span>
+                <chakra.span fontSize={['1xl', '3xl']}>3°</chakra.span>
                 <Wrap cursor="pointer">
                   <WrapItem>
-                    <img src="/item.jpg" alt="imagehero" />
+                    <Image
+                      height={['12', '58']}
+                      src="http://www.portaldota.com.br/imagens/item/113_item_pna.jpg"
+                      alt="imagehero"
+                    />
                   </WrapItem>
                 </Wrap>
               </Flex>

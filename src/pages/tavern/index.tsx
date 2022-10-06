@@ -11,11 +11,12 @@ import {
   WrapItem,
   Wrap,
   chakra,
+  Spinner,
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Tavern } from '../../interfaces/tavern.interface';
+
 import { api } from '../../services/api';
 
 export async function getServerSideProps() {
@@ -31,36 +32,58 @@ export async function getServerSideProps() {
 const index = ({ tavern }: any) => {
   const [show, setShow] = useState(false);
   const [heroInfo, setHeroInfo] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fechtHeroTavern = async (id: string) => {
-    const response = await api.get(
-      `https://api-portaldota.herokuapp.com/tavern/${id}`
-    );
-    const data = await response.data;
-    setHeroInfo(data[0].heroes);
-    setShow(!show);
+    try {
+      setLoading(true);
+      const response = await api.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/tavern/${id}`
+      );
+      const data = await response.data;
+      setHeroInfo(data[0].heroes);
+      setLoading(false);
+      setShow(!show);
+    } catch (err) {
+      setLoading(false);
+      return err;
+    } finally {
+      setLoading(false);
+    }
   };
-
-  heroInfo.map((hero: any) => console.log(hero));
   return (
     <Box as="main" p="4" color="white" ml="12">
       <Head>
         <title>Taverns</title>
       </Head>
-      <Flex justify="center" align="center">
+      <Flex
+        justify="center"
+        align="center"
+        gap="8"
+        direction={['column', 'row']}
+      >
         <Box>
-          <Heading fontWeight="thin" textAlign="center" fontSize="1xl">
-            Ecolha a taverna abaixo e selecione o hero
+          <Heading
+            fontWeight="light"
+            textAlign="center"
+            fontSize={['24', '2xl']}
+          >
+            Ecolha a taverna e selecione o hero
           </Heading>
         </Box>
         <Box>
           <img
-            src="http://www.portaldota.com.br/imagens/heros/99_hero_anim.gif"
+            src="http://www.portaldota.com.br/imagens/heros/104_hero_anim.gif"
             alt="herogif"
           />
         </Box>
       </Flex>
-      <Flex mt="8" justify="space-around" align="center">
+      <Flex
+        mt="8"
+        justify="space-around"
+        align="center"
+        direction={['column', 'row']}
+      >
         <Box>
           <Heading fontSize="1xl" textAlign="center">
             Sentinel
@@ -90,24 +113,33 @@ const index = ({ tavern }: any) => {
                           </Wrap>
                         </Flex>
                       </Box>
-                      {show && (
-                        <Flex align="flex-start" justify="flex-start" gap="2">
-                          {heroInfo.map(
-                            (hero: any) =>
-                              item.id === hero.tavern.id && (
-                                <Link
-                                  key={hero.id}
-                                  href={`/heroes/${hero.slug}`}
-                                  passHref
-                                >
-                                  <Flex cursor="pointer">
-                                    <img src={hero.logo_hero} alt="" />
-                                  </Flex>
-                                </Link>
-                              )
-                          )}
-                        </Flex>
-                      )}
+
+                      <Flex align="flex-start" justify="flex-start" gap="2">
+                        {heroInfo.map(
+                          (hero: any) =>
+                            item.id === hero.tavern.id && (
+                              <>
+                                {loading ? (
+                                  <Spinner />
+                                ) : (
+                                  <>
+                                    {show && (
+                                      <Link
+                                        key={hero.id}
+                                        href={`/heroes/${hero.slug}`}
+                                        passHref
+                                      >
+                                        <Flex cursor="pointer">
+                                          <img src={hero.logo_hero} alt="" />
+                                        </Flex>
+                                      </Link>
+                                    )}
+                                  </>
+                                )}
+                              </>
+                            )
+                        )}
+                      </Flex>
                     </>
                   )
               )}
@@ -142,24 +174,33 @@ const index = ({ tavern }: any) => {
                           </Wrap>
                         </Flex>
                       </Box>
-                      {show && (
-                        <Flex align="flex-start" justify="flex-start" gap="2">
-                          {heroInfo.map(
-                            (hero: any) =>
-                              item.id === hero.tavern.id && (
-                                <Link
-                                  key={hero.id}
-                                  href={`/heroes/${hero.slug}`}
-                                  passHref
-                                >
-                                  <Flex key={hero.id} cursor="pointer">
-                                    <img src={hero.logo_hero} alt="" />
-                                  </Flex>
-                                </Link>
-                              )
-                          )}
-                        </Flex>
-                      )}
+
+                      <Flex align="flex-start" justify="flex-start" gap="2">
+                        {heroInfo.map(
+                          (hero: any) =>
+                            item.id === hero.tavern.id && (
+                              <>
+                                {loading ? (
+                                  <Spinner />
+                                ) : (
+                                  <>
+                                    {show && (
+                                      <Link
+                                        key={hero.id}
+                                        href={`/heroes/${hero.slug}`}
+                                        passHref
+                                      >
+                                        <Flex cursor="pointer">
+                                          <img src={hero.logo_hero} alt="" />
+                                        </Flex>
+                                      </Link>
+                                    )}
+                                  </>
+                                )}
+                              </>
+                            )
+                        )}
+                      </Flex>
                     </>
                   )
               )}
