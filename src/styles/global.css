@@ -1,10 +1,12 @@
 body {
-  cursor: url(http://www.portaldota.com.br/imagens/portaldota2.cur),
-    url(http://www.portaldota.com.br/imagens/portaldota2.cur), auto;
+  cursor: url(https://res.cloudinary.com/dn64mfrfs/raw/upload/v1665029329/images/portaldota2_dubulf.cur),
+    url(https://res.cloudinary.com/dn64mfrfs/raw/upload/v1665029329/images/portaldota2_dubulf.cur),
+    auto;
 }
 input {
-  cursor: url(http://www.portaldota.com.br/imagens/portaldota2.cur),
-    url(http://www.portaldota.com.br/imagens/portaldota2.cur), auto;
+  cursor: url(https://res.cloudinary.com/dn64mfrfs/raw/upload/v1665029329/images/portaldota2_dubulf.cur),
+    url(https://res.cloudinary.com/dn64mfrfs/raw/upload/v1665029329/images/portaldota2_dubulf.cur),
+    auto;
 }
 .button {
   padding: 1rem;

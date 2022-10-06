@@ -35,7 +35,7 @@ export default function Card({
       <Box
         maxW={'270px'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.800')}
+        bg="gray.800"
         boxShadow={'2xl'}
         rounded={'md'}
         overflow={'hidden'}
