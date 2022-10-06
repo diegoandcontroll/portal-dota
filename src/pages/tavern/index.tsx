@@ -73,7 +73,7 @@ const index = ({ tavern }: any) => {
         </Box>
         <Box>
           <img
-            src="http://www.portaldota.com.br/imagens/heros/104_hero_anim.gif"
+            src="https://res.cloudinary.com/dn64mfrfs/image/upload/v1665036458/images/heroes/31_hero_anim_dxjsbm.gif"
             alt="herogif"
           />
         </Box>
