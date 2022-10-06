@@ -35,12 +35,12 @@ export default function Card({
       <Box
         maxW={'270px'}
         w={'full'}
-        bg="gray.800"
+        bg="gray.600"
         boxShadow={'2xl'}
         rounded={'md'}
         overflow={'hidden'}
         pb="4"
-        style={{ backgroundColor: '#1A202C' }}
+        style={{ backgroundColor: '#4A5568' }}
       >
         <Image
           h={'150px'}
@@ -72,13 +72,13 @@ export default function Card({
           <Stack direction={'row'} justify={'center'} spacing={6}>
             <Stack spacing={0} align={'center'}>
               <Text fontWeight={600}>{mana}</Text>
-              <Text fontSize={'sm'} color={'gray.500'}>
+              <Text fontSize={'sm'} color={'white'}>
                 Pontos de mana
               </Text>
             </Stack>
             <Stack spacing={0} align={'center'}>
               <Text fontWeight={600}>{health}</Text>
-              <Text fontSize={'sm'} color={'gray.500'}>
+              <Text fontSize={'sm'} color={'white'}>
                 Pontos de vida
               </Text>
             </Stack>
