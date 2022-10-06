@@ -42,12 +42,12 @@ const index = () => {
             textAlign="center"
             fontSize={['24', '2xl']}
           >
-            Ecolha a taverna e selecione o hero
+            Clique na pergunta para descobrir a resposta !
           </Heading>
         </Box>
         <Box>
           <img
-            src="http://www.portaldota.com.br/imagens/heros/85_hero_anim.gif"
+            src="https://res.cloudinary.com/dn64mfrfs/image/upload/v1665033782/images/heroes/51_hero_anim_ezbozs.gif"
             alt="herogif"
           />
         </Box>
@@ -68,11 +68,18 @@ const index = () => {
                   {item.title}
                 </Heading>
               </PopoverTrigger>
-              <PopoverContent bg="gray.600">
+              <PopoverContent
+                backgroundColor="gray.600"
+                style={{ backgroundColor: '#4A5568' }}
+              >
                 <PopoverArrow />
                 <PopoverCloseButton pl="6" />
-                <PopoverHeader color="gray.200">{item.title}</PopoverHeader>
-                <PopoverBody color="gray.200">{item.content}</PopoverBody>
+                <PopoverHeader color="gray.200" style={{ color: '#E2E8F0' }}>
+                  {item.title}
+                </PopoverHeader>
+                <PopoverBody color="gray.200" style={{ color: '#E2E8F0' }}>
+                  {item.content}
+                </PopoverBody>
               </PopoverContent>
             </Popover>
           </Box>

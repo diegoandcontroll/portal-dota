@@ -40,6 +40,7 @@ export default function Card({
         rounded={'md'}
         overflow={'hidden'}
         pb="4"
+        style={{ backgroundColor: '#1A202C' }}
       >
         <Image
           h={'150px'}

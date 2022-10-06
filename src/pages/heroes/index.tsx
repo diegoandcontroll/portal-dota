@@ -67,7 +67,7 @@ const index = ({ heroes }: any) => {
         </Box>
         <Box>
           <img
-            src="http://www.portaldota.com.br/imagens/heros/36_hero_anim.gif"
+            src="https://res.cloudinary.com/dn64mfrfs/image/upload/v1665036424/images/heroes/36_hero_anim_bolwyr.gif"
             alt="herogif"
           />
         </Box>

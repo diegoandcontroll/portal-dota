@@ -120,7 +120,7 @@ const Home: NextPage = () => {
                     <Image
                       width={48}
                       height={48}
-                      src="	http://www.portaldota.com.br/imagens/item/104_item_pna.jpg"
+                      src="/item2.jpg"
                       alt="imagehero"
                     />
                   </WrapItem>
