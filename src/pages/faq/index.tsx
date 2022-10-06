@@ -68,11 +68,11 @@ const index = () => {
                   {item.title}
                 </Heading>
               </PopoverTrigger>
-              <PopoverContent>
+              <PopoverContent bg="gray.600">
                 <PopoverArrow />
                 <PopoverCloseButton pl="6" />
-                <PopoverHeader>{item.title}</PopoverHeader>
-                <PopoverBody>{item.content}</PopoverBody>
+                <PopoverHeader color="gray.200">{item.title}</PopoverHeader>
+                <PopoverBody color="gray.200">{item.content}</PopoverBody>
               </PopoverContent>
             </Popover>
           </Box>

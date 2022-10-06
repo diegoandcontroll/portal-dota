@@ -7,6 +7,7 @@ const nextConfig = {
       'http://www.portaldota.com.br',
       'http://www.portaldota.com.br/images',
       'www.portaldota.com.br',
+      'res.cloudinary.com',
     ],
   },
 };

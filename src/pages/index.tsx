@@ -61,7 +61,7 @@ const Home: NextPage = () => {
                       <Image
                         width={48}
                         height={48}
-                        src="http://www.portaldota.com.br/imagens/heros/49_hero_pna.jpg"
+                        src="https://res.cloudinary.com/dn64mfrfs/image/upload/v1665028940/images/heroes/49_hero_pna_enc8le.jpg"
                         alt="imagehero"
                       />
                     </WrapItem>
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
                       <Image
                         width={48}
                         height={48}
-                        src="http://www.portaldota.com.br/imagens/heros/11_hero_pna.jpg"
+                        src="https://res.cloudinary.com/dn64mfrfs/image/upload/v1665029309/images/heroes/11_hero_pna_h996qa.jpg"
                         alt="imagehero"
                       />
                     </WrapItem>
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
                       <Image
                         width={48}
                         height={48}
-                        src="http://www.portaldota.com.br/imagens/heros/87_hero_pna.jpg"
+                        src="https://res.cloudinary.com/dn64mfrfs/image/upload/v1665029309/images/heroes/87_hero_pna_zmuomc.jpg"
                         alt="imagehero"
                       />
                     </WrapItem>
