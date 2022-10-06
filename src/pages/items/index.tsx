@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading, Spinner } from '@chakra-ui/react';
 import Head from 'next/head';
 
 const index = () => {
@@ -13,6 +13,14 @@ const index = () => {
           <Heading fontWeight="thin" textAlign="center" fontSize="1xl">
             In development page
           </Heading>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            mt="8"
+          >
+            <Spinner />
+          </Box>
         </Box>
       </Flex>
     </Box>

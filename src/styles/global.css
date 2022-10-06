@@ -1,0 +1,47 @@
+body {
+  cursor: url(http://www.portaldota.com.br/imagens/portaldota2.cur),
+    url(http://www.portaldota.com.br/imagens/portaldota2.cur), auto;
+}
+input {
+  cursor: url(http://www.portaldota.com.br/imagens/portaldota2.cur),
+    url(http://www.portaldota.com.br/imagens/portaldota2.cur), auto;
+}
+.button {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+}
+.hidden {
+  display: none;
+}
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin-left: 5.5rem;
+}
+.paginationBttns a {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+}
+.paginationBttns a:hover {
+  color: black;
+  background: #fff;
+}
+.paginationActive a {
+  color: black;
+  background: #fff;
+}
+.paginationDisabled a {
+  color: #0bc5ea;
+  background: #fff;
+}

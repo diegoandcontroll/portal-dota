@@ -1,7 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
-import { Box, Flex, Heading, chakra } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Heading,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody,
+} from '@chakra-ui/react';
 import autoAnimate from '@formkit/auto-animate';
 import Head from 'next/head';
 import { useEffect, useRef } from 'react';
@@ -19,15 +30,24 @@ const index = () => {
       <Head>
         <title>FAQ</title>
       </Head>
-      <Flex justify="center" align="center">
+      <Flex
+        justify="center"
+        align="center"
+        gap="8"
+        direction={['column', 'row']}
+      >
         <Box>
-          <Heading fontWeight="thin" textAlign="center" fontSize="1xl">
-            Clique para saber as FAQs do dotA
+          <Heading
+            fontWeight="light"
+            textAlign="center"
+            fontSize={['24', '2xl']}
+          >
+            Ecolha a taverna e selecione o hero
           </Heading>
         </Box>
-        <Box ml="6">
+        <Box>
           <img
-            src="	http://www.portaldota.com.br/imagens/heros/90_hero_anim.gif "
+            src="http://www.portaldota.com.br/imagens/heros/85_hero_anim.gif"
             alt="herogif"
           />
         </Box>
@@ -42,13 +62,19 @@ const index = () => {
       >
         {FaqData.map((item) => (
           <Box key={item.id} py="4">
-            <Heading cursor="pointer" className="dropdown-label" fontSize="18">
-              {item.title}
-            </Heading>
-
-            <chakra.p fontSize="14" pl="2" pt="2">
-              {item.content}
-            </chakra.p>
+            <Popover>
+              <PopoverTrigger>
+                <Heading fontSize="14" cursor="pointer">
+                  {item.title}
+                </Heading>
+              </PopoverTrigger>
+              <PopoverContent>
+                <PopoverArrow />
+                <PopoverCloseButton pl="6" />
+                <PopoverHeader>{item.title}</PopoverHeader>
+                <PopoverBody>{item.content}</PopoverBody>
+              </PopoverContent>
+            </Popover>
           </Box>
         ))}
       </Flex>

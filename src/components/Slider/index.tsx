@@ -53,6 +53,17 @@ export default function CaptionCarousel() {
       image:
         'https://www.hiveworkshop.com/attachments/view-awsome-dota-jpg.266434/',
     },
+    {
+      title: 'Design Projects 5',
+      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image: 'https://wallpaperaccess.com/full/1719234.jpg',
+    },
+    {
+      title: 'Design Projects 5',
+      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      image:
+        'https://clickwallpapers.net/wp-content/uploads/2022/07/clickwallpapers-Dota1-jogos-fullhd-img1.jpg',
+    },
   ];
 
   return (
@@ -113,6 +124,7 @@ export default function CaptionCarousel() {
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
             backgroundImage={`url(${card.image})`}
+            mr={['18', '']}
           >
             {/* This is the block you need to change, to customize the caption */}
             <Container
